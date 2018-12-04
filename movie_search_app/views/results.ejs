@@ -1,0 +1,12 @@
+<a href="/">More Searching</a>
+
+<h1>Results</h1>
+
+<ul>
+    <% data.Search.forEach(function(movie) { %>
+        <li>
+            Title: <strong><%= movie.Title %></strong> / Year: <em><%= movie.Year %></em>
+        </li>
+    <% }); %>
+</ul>
+

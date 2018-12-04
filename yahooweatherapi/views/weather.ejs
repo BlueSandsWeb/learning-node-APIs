@@ -1,0 +1,26 @@
+
+
+<h1>D.C. Weather Info</h1>
+<p>Current Time:  <%= data.query.created %></p>
+<h3>Current Weather As Of <%= data.query.results.channel.item.pubDate %>: </h3>
+<p>Current Cloud Cover: <%= data.query.results.channel.item.condition.text %></p>
+<p>Current Temp: <%= data.query.results.channel.item.condition.temp %></p>
+<p>With Wind Chill: <%= data.query.results.channel.wind.chill %></p>
+<p>Wind Speed: <%= data.query.results.channel.wind.speed %></p>
+<p>Humidity: <%= data.query.results.channel.atmosphere.humidity %></p>
+
+<p>Sunrise: <%= data.query.results.channel.astronomy.sunrise %></p>
+<p>Sunset: <%= data.query.results.channel.astronomy.sunset %></p>
+
+<p>Today's High: <%= data.query.results.channel.item.forecast[0].high %></p>
+<p>Today's Low: <%= data.query.results.channel.item.forecast[0].low %></p>
+<p>Today's Weather: <%= data.query.results.channel.item.forecast[0].text %></p>
+
+<p>Tomorrow's High: <%= data.query.results.channel.item.forecast[1].high %></p>
+<p>Tomorrow's Low: <%= data.query.results.channel.item.forecast[1].low %></p>
+<p>Tomorrow's Weather: <%= data.query.results.channel.item.forecast[1].text %></p>
+
+
+<!-- Preformatted (with their ad / link at the bottom and not real complete -->
+<%- data.query.results.channel.item.description %>
+
